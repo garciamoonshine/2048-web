@@ -1,0 +1,28 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#faf8ef;display:flex;justify-content:center;padding:20px;font-family:'Arial Rounded MT Bold','Arial',sans-serif}
+#app{width:100%;max-width:480px}
+#header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+#title{font-size:3rem;font-weight:bold;color:#776e65}
+#scores{display:flex;gap:8px}
+.score-box{background:#bbada0;border-radius:6px;padding:8px 16px;text-align:center;min-width:70px}
+.score-label{font-size:0.6rem;color:#eee8e0;letter-spacing:2px}
+.score-box>div:last-child{font-size:1.2rem;font-weight:bold;color:#fff}
+#sub-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+#sub-header p{color:#776e65;font-size:0.9rem}
+#btns{display:flex;gap:8px}
+button{background:#8f7a66;color:#f9f6f2;border:none;border-radius:6px;padding:8px 14px;font-size:0.85rem;cursor:pointer;font-weight:bold;transition:background .2s}
+button:hover{background:#7a6657}
+#board-wrap{background:#bbada0;border-radius:10px;padding:10px;position:relative}
+#board{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr);gap:10px}
+.cell{background:rgba(238,228,218,.35);border-radius:6px;aspect-ratio:1}
+.tile{position:absolute;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:bold;transition:all .12s ease;z-index:2}
+.tile.new{animation:pop .2s ease}
+.tile.merged{animation:merge .15s ease}
+@keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+@keyframes merge{0%{transform:scale(1)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
+#game-over{position:absolute;inset:0;background:rgba(238,228,218,.7);border-radius:10px;display:flex;align-items:center;justify-content:center;z-index:10}
+#game-over.hidden{display:none}
+#game-over-msg{text-align:center;padding:24px}
+#over-title{font-size:2rem;color:#776e65;margin-bottom:8px}
+#over-score{color:#776e65;margin-bottom:16px}
+#retry-btn{background:#e94560;color:#fff;font-size:1rem;padding:10px 24px}

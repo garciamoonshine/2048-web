@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="header">
+      <div id="title">2048</div>
+      <div id="scores">
+        <div class="score-box"><div class="score-label">SCORE</div><div id="score">0</div></div>
+        <div class="score-box"><div class="score-label">BEST</div><div id="best">0</div></div>
+      </div>
+    </div>
+    <div id="sub-header">
+      <p>Join tiles to get <b>2048!</b></p>
+      <div id="btns">
+        <button id="undo-btn">↩ Undo</button>
+        <button id="new-btn">New Game</button>
+      </div>
+    </div>
+    <div id="board-wrap">
+      <div id="board"></div>
+    </div>
+    <div id="game-over" class="hidden">
+      <div id="game-over-msg">
+        <h2 id="over-title">Game Over!</h2>
+        <p id="over-score"></p>
+        <button id="retry-btn">Try Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="src/constants.js"></script>
+  <script src="src/board.js"></script>
+  <script src="src/renderer.js"></script>
+  <script src="src/game.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
